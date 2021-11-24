@@ -9,5 +9,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
             //ده كومت من جود
         //كومنت من أمل
+        //كومنت من ابتهال
     }
 }
