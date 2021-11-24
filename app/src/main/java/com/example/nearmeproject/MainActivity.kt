@@ -10,5 +10,6 @@ class MainActivity : AppCompatActivity() {
             //ده كومت من جود
         //كومنت من أمل
         //كومنت من ابتهال
+        //كومنت من وعد
     }
 }
