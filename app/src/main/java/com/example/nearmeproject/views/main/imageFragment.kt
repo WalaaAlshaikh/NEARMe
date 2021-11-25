@@ -29,7 +29,7 @@ class imageFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val recyclerView: RecyclerView =view.findViewById(R.id.recyclerView1)
-        val adapter= ImageAdapter()
+        val adapter= ImageAdapter(imageViewModel)
         recyclerView.adapter=adapter
         imageViewModel.callImage()
 

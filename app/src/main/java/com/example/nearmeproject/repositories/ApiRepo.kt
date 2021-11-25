@@ -14,6 +14,8 @@ private val retrofitService=Retrofit.Builder().baseUrl(BASE_URL).addConverterFac
     private val apiRetrofit=retrofitService.create(ImageApi::class.java)
      suspend fun getImages(lat:Double,lon:Double)=apiRetrofit.getImage(lat,lon)
 
+    suspend fun fetchphotodetails()=apiRetrofit.fetchSinglePicture()
+
 
 
     companion object{

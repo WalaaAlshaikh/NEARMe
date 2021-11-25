@@ -19,6 +19,8 @@ class ImageViewModel:ViewModel() {
 
 
     val imageLiveData=MutableLiveData<ImageModel>()
+    val oneimagelivedata=MutableLiveData<Photo>()
+
 
     fun callImage(){
 
@@ -43,4 +45,36 @@ class ImageViewModel:ViewModel() {
             }
         }
     }
+
+    fun fetchphotodetails()
+    {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                val response=apiRepo.fetchphotodetails()
+                if (response.isSuccessful)
+                {
+                    response.body()?.run {
+                        oneimagelivedata.postValue(this)
+                        Log.d("forfetching",response.body().toString())
+                    }
+                }
+                else
+                {
+                    Log.d(TAG,response.message())
+                }
+
+
+            }
+            catch (e:Exception)
+            {
+                Log.d(TAG,e.message.toString())
+            }
+
+
+        }
+    }
+
+
+
+
 }
