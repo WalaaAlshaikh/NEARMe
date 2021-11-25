@@ -34,11 +34,14 @@ class imageFragment : Fragment() {
         imageViewModel.callImage()
 
 
+
         imageViewModel.imageLiveData.observe(viewLifecycleOwner,{
             adapter.submittedList(it.photos.photo)
             imageViewModel.callImage()
 
         })
+
+        
 
     }
 

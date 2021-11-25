@@ -19,7 +19,7 @@ data class Photo(
     @SerializedName("geo_is_public")
     val geoIsPublic: Int,
     @SerializedName("height_m")
-    val heightM: Int,
+    val height: Int,
     @SerializedName("id")
     val id: String,
     @SerializedName("isfamily")
@@ -43,9 +43,9 @@ data class Photo(
     @SerializedName("title")
     val title: String,
     @SerializedName("url_m")
-    val urlM: String,
+    val url: String,
     @SerializedName("width_m")
-    val widthM: Int,
+    val width: Int,
     @SerializedName("woeid")
     val woeid: String
 )

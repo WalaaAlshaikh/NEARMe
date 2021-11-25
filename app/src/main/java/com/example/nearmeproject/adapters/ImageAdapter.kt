@@ -21,7 +21,7 @@ class ImageAdapter() :
 
 
         override fun areItemsTheSame(oldItem: Photo, newItem: Photo): Boolean {
-            return oldItem==newItem
+            return oldItem.id==newItem.id
         }
 
         override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
@@ -57,7 +57,8 @@ class ImageAdapter() :
 
     class ImageViewHolder(val binding:ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item:Photo){
-            Picasso.get().load(item.urlM).into(binding.imageView1)
+            Picasso.get().load(item.url).into(binding.imageView1)
+
 
         }
 
