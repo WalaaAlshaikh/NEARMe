@@ -3,7 +3,7 @@ package com.example.nearmeproject.model.images
 
 import com.google.gson.annotations.SerializedName
 
-data class ImagesModel(
+data class Photo(
     @SerializedName("accuracy")
     val accuracy: String,
     @SerializedName("context")
@@ -19,7 +19,7 @@ data class ImagesModel(
     @SerializedName("geo_is_public")
     val geoIsPublic: Int,
     @SerializedName("height_m")
-    val height: Int,
+    val heightM: Int,
     @SerializedName("id")
     val id: String,
     @SerializedName("isfamily")
@@ -43,9 +43,9 @@ data class ImagesModel(
     @SerializedName("title")
     val title: String,
     @SerializedName("url_m")
-    val url: String,
+    val urlM: String,
     @SerializedName("width_m")
-    val width: Int,
+    val widthM: Int,
     @SerializedName("woeid")
     val woeid: String
 )
