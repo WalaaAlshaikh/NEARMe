@@ -1,10 +1,9 @@
-package com.example.nearmeproject.repositories
+package com.example.nearme.repositories
 
 import android.content.Context
-import com.example.nearmeproject.api.ImageApi
+import com.example.nearme.api.ImageApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.lang.Exception
 
 private const val BASE_URL="https://www.flickr.com"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/imageFragment"
-        android:name="com.example.nearmeproject.views.main.imageFragment"
+        android:name="com.example.nearme.views.main.imageFragment"
         android:label="fragment_image"
         tools:layout="@layout/fragment_image" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailfragment"
-        android:name="com.example.nearmeproject.views.main.detailfragment"
+        android:name="com.example.nearme.views.main.detailfragment"
         android:label="fragment_detailfragment"
         tools:layout="@layout/fragment_detailfragment" />
 </navigation>

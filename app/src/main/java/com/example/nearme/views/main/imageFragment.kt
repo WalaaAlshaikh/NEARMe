@@ -1,4 +1,4 @@
-package com.example.nearmeproject.views.main
+package com.example.nearme.views.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,13 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nearmeproject.R
-import com.example.nearmeproject.adaptersimport.ImageAdapter
-import com.example.nearmeproject.model.images.ImageModel
-import com.example.nearmeproject.model.images.Photo
+import com.example.nearme.R
+import com.example.nearme.adaptersimport.ImageAdapter
+import com.example.nearme.model.images.Photo
 
 
 class imageFragment : Fragment() {
+
+    private val lat=26.399250
+    private val lon=49.984360
 
     private val imageViewModel:ImageViewModel by activityViewModels()
     private val list= mutableListOf<Photo>()
@@ -31,13 +33,13 @@ class imageFragment : Fragment() {
         val recyclerView: RecyclerView =view.findViewById(R.id.recyclerView1)
         val adapter= ImageAdapter(imageViewModel)
         recyclerView.adapter=adapter
-        imageViewModel.callImage()
+        imageViewModel.callImage(lat,lon)
 
 
 
         imageViewModel.imageLiveData.observe(viewLifecycleOwner,{
             adapter.submittedList(it.photos.photo)
-            imageViewModel.callImage()
+            imageViewModel.callImage(lat,lon)
 
         })
 

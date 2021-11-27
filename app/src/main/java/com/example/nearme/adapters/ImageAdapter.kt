@@ -1,23 +1,16 @@
-package com.example.nearmeproject.adaptersimport
+package com.example.nearme.adaptersimport
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nearmeproject.R
-import com.example.nearmeproject.databinding.ItemLayoutBinding
-import com.example.nearmeproject.model.images.ImageModel
-import com.example.nearmeproject.model.images.Photo
-import com.example.nearmeproject.model.images.Photos
-import com.example.nearmeproject.views.main.ImageViewModel
-import com.example.nearmeproject.views.main.imageFragment
+import com.example.nearme.R
+import com.example.nearme.databinding.ItemLayoutBinding
+import com.example.nearme.model.images.Photo
+import com.example.nearme.views.main.ImageViewModel
 import com.squareup.picasso.Picasso
-import kotlinx.coroutines.withContext
 
 class ImageAdapter(val image:ImageViewModel) :
     RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {

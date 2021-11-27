@@ -1,4 +1,4 @@
-package com.example.nearmeproject.model.images
+package com.example.nearme.model.images
 
 
 import com.google.gson.annotations.SerializedName

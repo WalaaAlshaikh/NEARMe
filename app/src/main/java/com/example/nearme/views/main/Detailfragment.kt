@@ -1,4 +1,4 @@
-package com.example.nearmeproject.views.main
+package com.example.nearme.views.main
 
 import android.os.Bundle
 import android.util.Log
@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LifecycleOwner
-import com.example.nearmeproject.R
-import com.example.nearmeproject.databinding.FragmentDetailfragmentBinding
+import com.example.nearme.databinding.FragmentDetailfragmentBinding
 import com.squareup.picasso.Picasso
 
 
@@ -39,7 +37,7 @@ class detailfragment : Fragment() {
     {
         oneimageviewmodel.oneimagelivedata.observe(viewLifecycleOwner, {
 
-            Picasso.get().load(it.urlM).into(binding.imagefordetails)
+            Picasso.get().load(it.url).into(binding.imagefordetails)
             binding.placename.text=it.title
             Log.d("dfd",binding.placename.text.toString())
         })
