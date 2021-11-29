@@ -3,14 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMe/app/src/main/res/layout/activity_main.xml" value="0.15572916666666667" />
-        <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMe/app/src/main/res/layout/fragment_image.xml" value="0.35572916666666665" />
-        <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMe/app/src/main/res/layout/fragment_image_maps.xml" value="0.18333333333333332" />
-        <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMe/app/src/main/res/layout/fragment_test_map.xml" value="0.20989583333333334" />
         <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/activity_main.xml" value="0.18385416666666668" />
-        <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/fragment_detailfragment.xml" value="0.35572916666666665" />
-        <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/fragment_image.xml" value="0.19791666666666666" />
-        <entry key="..\:/Users/loloa/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/item_layout.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/activity_main.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/activity_splash.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/fragment_detailfragment.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/fragment_image.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/NEARMeProject/app/src/main/res/layout/fragment_on_boarding.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>
