@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
                 endId: Int
             ) {
 
-                //efef
+                //efefdddd
             }
 
             override fun onTransitionChange(
