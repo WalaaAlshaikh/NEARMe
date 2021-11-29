@@ -18,5 +18,5 @@
         android:id="@+id/detailfragment"
         android:name="com.example.nearmeproject.views.main.detailfragment"
         android:label="fragment_detailfragment"
-        tools:layout="@layout/fragment_detailfragment" />
+        tools:layout="@layout/fragment_detalis_image" />
 </navigation>
