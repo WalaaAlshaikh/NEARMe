@@ -27,7 +27,7 @@ class ImageViewModel:ViewModel() {
         viewModelScope.launch (Dispatchers.IO){
             try {
 
-                val response=apiRepo.getImages(26.399250,49.984360)
+                val response=apiRepo.getImages(35.6762,139.6503)
                 if (response.isSuccessful){
                     response.body()?.run {
                         Log.d(TAG,response.body().toString())
