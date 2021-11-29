@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/testnav"
-    app:startDestination="@id/imageFragment">
+    app:startDestination="@id/imageMapsFragment">
 
     <fragment
         android:id="@+id/imageFragment"
@@ -19,4 +19,13 @@
         android:name="com.example.nearme.views.main.detailfragment"
         android:label="fragment_detailfragment"
         tools:layout="@layout/fragment_detailfragment" />
+    <fragment
+        android:id="@+id/imageMapsFragment"
+        android:name="com.example.nearme.views.main.ImageMapsFragment"
+        android:label="fragment_image_maps"
+        tools:layout="@layout/fragment_image_maps" >
+        <action
+            android:id="@+id/action_imageMapsFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
 </navigation>

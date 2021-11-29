@@ -1,5 +1,6 @@
 package com.example.nearme.views.main
 
+import android.location.Location
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -18,6 +19,13 @@ class ImageViewModel:ViewModel() {
     val apiRepo=ApiRepo.get()
     val imageLiveData=MutableLiveData<ImageModel>()
     val oneimagelivedata=MutableLiveData<Photo>()
+    val mapLiveData=MutableLiveData<ImageModel>()
+
+
+
+
+    var long:Double=0.0
+    var lat:Double=0.0
 
 
     fun callImage(lat:Double, lon:Double){
@@ -30,6 +38,32 @@ class ImageViewModel:ViewModel() {
                     response.body()?.run {
                         Log.d(TAG,response.body().toString())
                         imageLiveData.postValue(this)
+
+
+                    }
+                }else{
+                    Log.d(TAG,response.message())
+                }
+
+            }catch (e:Exception){
+                Log.d(TAG,e.message.toString())
+                ////
+            }
+        }
+    }
+
+    fun mapcall(lat:Double, lon:Double){
+        Log.d(TAG,"view model: lat $lat, long $long")
+
+        viewModelScope.launch (Dispatchers.IO){
+            try {
+
+                val response=apiRepo.getImages(lat,lon)
+                if (response.isSuccessful){
+                    response.body()?.run {
+                        Log.d(TAG,response.body().toString())
+                        mapLiveData.postValue(this)
+
 
 
                     }
@@ -60,7 +94,6 @@ class ImageViewModel:ViewModel() {
                 {
                     Log.d(TAG,response.message())
                 }
-
 
             }
             catch (e:Exception)

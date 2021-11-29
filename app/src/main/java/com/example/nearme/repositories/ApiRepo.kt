@@ -14,6 +14,7 @@ private val retrofitService=Retrofit.Builder().baseUrl(BASE_URL).addConverterFac
      suspend fun getImages(lat:Double,lon:Double)=apiRetrofit.getImage(lat,lon)
 
     suspend fun fetchphotodetails()=apiRetrofit.fetchSinglePicture()
+    suspend fun updatemap(lat1:Double,lon1:Double)=apiRetrofit.updatemap()
 
 
 
