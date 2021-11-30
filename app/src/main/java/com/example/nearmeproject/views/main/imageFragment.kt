@@ -28,7 +28,7 @@ class imageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView: RecyclerView =view.findViewById(R.id.recyclerView1)
+        val recyclerView: RecyclerView =view.findViewById(R.id.Image_RecyclerView)
         val adapter= ImageAdapter(imageViewModel)
         recyclerView.adapter=adapter
         imageViewModel.callImage()
