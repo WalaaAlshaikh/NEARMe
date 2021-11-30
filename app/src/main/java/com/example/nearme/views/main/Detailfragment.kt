@@ -10,7 +10,7 @@ import androidx.fragment.app.activityViewModels
 import com.example.nearme.databinding.FragmentDetalisImageBinding
 import com.squareup.picasso.Picasso
 
-
+// this fragment is for presenting the details of each image when clicked
 class detailfragment : Fragment() {
 
    private lateinit var binding:FragmentDetalisImageBinding
@@ -30,8 +30,6 @@ class detailfragment : Fragment() {
         oneimageviewmodel.fetchphotodetails()
 
     }
-
-
 
     fun observers()
     {

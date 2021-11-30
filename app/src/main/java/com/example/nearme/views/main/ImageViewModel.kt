@@ -18,11 +18,17 @@ class ImageViewModel:ViewModel() {
 
     val apiRepo=ApiRepo.get()
     val imageLiveData=MutableLiveData<ImageModel>()
+    val imageErrorLiveData=MutableLiveData<String>()
+
+    //****************************************************//
     val oneimagelivedata=MutableLiveData<Photo>()
+    val oneImageErrorLiveData=MutableLiveData<String>()
+    //*******************************************************//
+
     val mapLiveData=MutableLiveData<ImageModel>()
+    val mapErrorLiveData=MutableLiveData<String>()
 
-
-
+    //**************************************//
 
     var long:Double=0.0
     var lat:Double=0.0
@@ -43,11 +49,13 @@ class ImageViewModel:ViewModel() {
                     }
                 }else{
                     Log.d(TAG,response.message())
+                    imageErrorLiveData.postValue(response.message())
                 }
 
             }catch (e:Exception){
                 Log.d(TAG,e.message.toString())
-                ////
+                imageErrorLiveData.postValue(e.message.toString())
+
             }
         }
     }
@@ -69,11 +77,12 @@ class ImageViewModel:ViewModel() {
                     }
                 }else{
                     Log.d(TAG,response.message())
+                    mapErrorLiveData.postValue(response.message())
                 }
 
             }catch (e:Exception){
                 Log.d(TAG,e.message.toString())
-                ////
+                mapErrorLiveData.postValue(e.message)
             }
         }
     }
@@ -93,12 +102,14 @@ class ImageViewModel:ViewModel() {
                 else
                 {
                     Log.d(TAG,response.message())
+                    oneImageErrorLiveData.postValue(response.message())
                 }
 
             }
             catch (e:Exception)
             {
                 Log.d(TAG,e.message.toString())
+                oneImageErrorLiveData.postValue(e.message)
             }
 
 
