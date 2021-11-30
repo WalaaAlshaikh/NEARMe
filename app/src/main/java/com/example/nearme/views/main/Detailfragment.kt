@@ -7,20 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.example.nearme.databinding.FragmentDetailfragmentBinding
+import com.example.nearme.databinding.FragmentDetalisImageBinding
 import com.squareup.picasso.Picasso
 
-
+// this fragment is for presenting the details of each image when clicked
 class detailfragment : Fragment() {
 
-   private lateinit var binding:FragmentDetailfragmentBinding
+   private lateinit var binding:FragmentDetalisImageBinding
     val oneimageviewmodel:ImageViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding= FragmentDetailfragmentBinding.inflate(layoutInflater,container,false)
+        binding= FragmentDetalisImageBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
 
@@ -31,15 +31,13 @@ class detailfragment : Fragment() {
 
     }
 
-
-
     fun observers()
     {
         oneimageviewmodel.oneimagelivedata.observe(viewLifecycleOwner, {
 
-            Picasso.get().load(it.url).into(binding.imagefordetails)
-            binding.placename.text=it.title
-            Log.d("dfd",binding.placename.text.toString())
+            Picasso.get().load(it.url).into(binding.imageItem)
+            binding.imageCity.text=it.title
+            Log.d("dfd",binding.imageCity.text.toString())
         })
     }
 

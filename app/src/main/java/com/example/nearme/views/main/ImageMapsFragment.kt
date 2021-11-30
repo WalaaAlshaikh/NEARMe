@@ -53,7 +53,7 @@ class ImageMapsFragment : Fragment(),OnMapReadyCallback, GoogleMap.OnMarkerClick
 
             var bundle= bundleOf("Lat" to  imageViewModel.lat,"Long" to imageViewModel.long)
 
-            findNavController().navigate(R.id.action_imageMapsFragment_to_imageFragment,bundle)
+            findNavController().navigate(R.id.action_imageMapsFragment2_to_imageFragment2,bundle)
 
         }
         fetchMap()
@@ -130,7 +130,7 @@ class ImageMapsFragment : Fragment(),OnMapReadyCallback, GoogleMap.OnMarkerClick
 
                             var bundle= bundleOf("Lat" to  imageViewModel.lat,"Long" to imageViewModel.long)
 
-                        findNavController().navigate(R.id.action_imageMapsFragment_to_imageFragment,bundle)
+                        findNavController().navigate(R.id.action_imageMapsFragment2_to_imageFragment2,bundle)
 
                     }
 

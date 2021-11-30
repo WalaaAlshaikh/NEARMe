@@ -12,61 +12,61 @@ import com.example.nearme.model.images.Photo
 import com.example.nearme.views.main.ImageViewModel
 import com.squareup.picasso.Picasso
 
-class ImageAdapter(val image:ImageViewModel) :
+class ImageAdapter(val image: ImageViewModel) :
     RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
+    // declaring diff_callback for DiffUtil
 
-    val DIFF_CALLBACK=object:DiffUtil.ItemCallback<Photo>(){
+    val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Photo>() {
 
 
         override fun areItemsTheSame(oldItem: Photo, newItem: Photo): Boolean {
-            return oldItem.id==newItem.id
+            return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
-            return oldItem==newItem
+            return oldItem == newItem
         }
 
     }
-    private val differ= AsyncListDiffer(this,DIFF_CALLBACK)
+    private val differ = AsyncListDiffer(this, DIFF_CALLBACK)
 
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): ImageAdapter.ImageViewHolder {
-        val binding=ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent,false)
+        val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ImageViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         val item = differ.currentList[position]
         holder.bind(item)
-        //val manager=(holder.itemView.context as FragmentActivity).supportFragmentManager
+        // for moving to another fragment when clicking on the picture to get details
         holder.itemView.setOnClickListener {
 
             image.oneimagelivedata.postValue(item)
-            holder.itemView.findNavController().navigate(R.id.action_imageFragment_to_detailfragment)
+            holder.itemView.findNavController()
+                .navigate(R.id.action_imageFragment2_to_detailfragment2)
 
         }
-//        Picasso.get().load(item.urlM).into(holder.image1)
+
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
 
-    fun submittedList(list:List<Photo>){
+    fun submittedList(list: List<Photo>) {
         differ.submitList(list)
 
     }
 
-    class ImageViewHolder(val binding:ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item:Photo){
+    class ImageViewHolder(val binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Photo) {
+            // displaying the image in the list
             Picasso.get().load(item.url).into(binding.imageView1)
-
-
         }
-
 
 
     }

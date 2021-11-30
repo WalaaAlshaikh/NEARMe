@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.nearmeproject.R
-import com.example.nearmeproject.databinding.FragmentOnBoardingBinding
+import androidx.navigation.fragment.findNavController
+import com.example.nearme.R
+import com.example.nearme.databinding.FragmentOnBoardingBinding
+
+
 
 class OnBoardingFragment : Fragment() {
 
@@ -24,6 +27,13 @@ class OnBoardingFragment : Fragment() {
     ): View? {
         binding = FragmentOnBoardingBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.goFlaotingButton.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardingFragment_to_imageMapsFragment2)
+        }
     }
 
 }
