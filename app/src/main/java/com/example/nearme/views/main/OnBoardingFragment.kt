@@ -1,12 +1,12 @@
-package com.example.nearmeproject.views.main
+package com.example.nearme.views.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.nearmeproject.R
-import com.example.nearmeproject.databinding.FragmentOnBoardingBinding
+import com.example.nearme.R
+import com.example.nearme.databinding.FragmentOnBoardingBinding
 
 class OnBoardingFragment : Fragment() {
 

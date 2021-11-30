@@ -9,12 +9,6 @@ import androidx.core.app.ActivityCompat
 import com.example.nearme.R
 import com.example.nearme.repositories.ApiRepo
 import com.example.nearme.views.main.ImageMapsFragment
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
-import com.google.android.gms.maps.*
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.model.MarkerOptions
 import java.lang.Exception
 
 private const val TAG = "MainActivity"

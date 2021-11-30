@@ -1,12 +1,12 @@
-package com.example.nearmeproject.views.main
+package com.example.nearme.views.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.constraintlayout.motion.widget.MotionLayout
-import com.example.nearmeproject.R
-import com.example.nearmeproject.databinding.ActivitySplashBinding
-import com.example.nearmeproject.views.MainActivity
+import com.example.nearme.R
+import com.example.nearme.databinding.ActivitySplashBinding
+import com.example.nearme.views.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 

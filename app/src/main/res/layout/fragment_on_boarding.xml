@@ -39,7 +39,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
-        android:contentDescription="@string/go"
         android:text="@string/go"
         app:backgroundTint="@color/green_light"
         app:icon="@android:drawable/ic_menu_mylocation"
