@@ -1,4 +1,4 @@
-package com.example.nearmeproject.views.main
+package com.example.nearme.views.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
