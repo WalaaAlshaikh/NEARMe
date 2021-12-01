@@ -1,4 +1,4 @@
-package com.example.nearmeproject.views.main
+package com.example.nearme.views.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
