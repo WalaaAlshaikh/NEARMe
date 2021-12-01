@@ -1,5 +1,7 @@
 package com.example.nearme.adaptersimport
 
+import android.annotation.SuppressLint
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -23,6 +25,7 @@ class ImageAdapter(val image: ImageViewModel) :
             return oldItem.id == newItem.id
         }
 
+
         override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
             return oldItem == newItem
         }
@@ -44,6 +47,9 @@ class ImageAdapter(val image: ImageViewModel) :
         holder.bind(item)
         // for moving to another fragment when clicking on the picture to get details
         holder.itemView.setOnClickListener {
+
+            val bundle = Bundle()
+            //bundle.putParcelable("key",item)
 
             image.oneimagelivedata.postValue(item)
             holder.itemView.findNavController()

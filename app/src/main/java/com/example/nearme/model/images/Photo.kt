@@ -1,9 +1,10 @@
 package com.example.nearme.model.images
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
-data class Photo(
+data class Photo (
     @SerializedName("accuracy")
     val accuracy: String,
     @SerializedName("context")

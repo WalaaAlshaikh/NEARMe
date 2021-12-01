@@ -19,6 +19,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.nearme.databinding.FragmentDetalisImageBinding
+import com.example.nearme.model.images.Photo
 import com.squareup.picasso.Picasso
 import java.io.ByteArrayOutputStream
 
@@ -41,6 +42,7 @@ class detailfragment : Fragment() {
         observers()
         oneimageviewmodel.fetchphotodetails()
 
+        //savedInstanceState!!.getParcelable<Photo>("key")
         binding.shareImage.setOnClickListener {
 
             val image:Bitmap?= getBitmapFromView(binding.imageItem)
@@ -79,13 +81,13 @@ class detailfragment : Fragment() {
             binding.imageTitle.text=it.title
             Log.d("dfd",binding.imageTitle.text.toString())
         })
-        oneimageviewmodel.oneImageErrorLiveData.observe(viewLifecycleOwner,{
-           it?.let {
-               Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-               oneimageviewmodel.oneImageErrorLiveData.postValue(null)
-           }
-
-        })
+//        oneimageviewmodel.oneImageErrorLiveData.observe(viewLifecycleOwner,{
+//           it?.let {
+//               Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+//               oneimageviewmodel.oneImageErrorLiveData.postValue(null)
+//           }
+//
+//        })
     }
 
 

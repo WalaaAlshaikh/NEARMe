@@ -68,7 +68,7 @@ class imageFragment : Fragment() {
         imageViewModel.oneImageErrorLiveData.observe(viewLifecycleOwner,{
 
             it?.let{
-                Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), it, Toast.LENGTH_LONG).show()
                 imageViewModel.oneImageErrorLiveData.postValue(null)
             }
         })
