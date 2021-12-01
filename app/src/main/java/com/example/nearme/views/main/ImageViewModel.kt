@@ -89,21 +89,22 @@ class ImageViewModel:ViewModel() {
 
     fun fetchphotodetails()
     {
-        viewModelScope.launch(Dispatchers.IO) {
+//        viewModelScope.launch(Dispatchers.IO) {
             try {
                 val response=apiRepo.fetchphotodetails()
-                if (response.isSuccessful)
-                {
-                    response.body()?.run {
-                        oneimagelivedata.postValue(this)
-                        Log.d("forfetching",response.body().toString())
-                    }
-                }
-                else
-                {
-                    Log.d(TAG,response.message())
-                    oneImageErrorLiveData.postValue(response.message())
-                }
+                oneimagelivedata.postValue(response)
+//                if (response.isSuccessful)
+//                {
+//                    response.body()?.run {
+//
+//                        Log.d("forfetching",response.body().toString())
+//                    }
+//                }
+//                else
+//                {
+//                    Log.d(TAG,response.message())
+//                    oneImageErrorLiveData.postValue(response.message())
+//                }
 
             }
             catch (e:Exception)
@@ -113,7 +114,7 @@ class ImageViewModel:ViewModel() {
             }
 
 
-        }
+//        }
     }
 
 

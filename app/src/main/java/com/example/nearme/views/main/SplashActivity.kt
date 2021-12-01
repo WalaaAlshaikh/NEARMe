@@ -1,10 +1,11 @@
-package com.example.nearmeproject.views.main
+package com.example.nearme.views.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.example.nearme.databinding.ActivitySplashBinding
+import com.example.nearme.repositories.ApiRepo
 import com.example.nearme.views.MainActivity
 
 
@@ -14,6 +15,7 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        ApiRepo.init(this)
 
         supportActionBar?.hide()
 
