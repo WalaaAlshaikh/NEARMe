@@ -33,11 +33,12 @@ class detailfragment : Fragment() {
 
     fun observers()
     {
-        oneimageviewmodel.oneimagelivedata.observe(viewLifecycleOwner, {
-
+        oneimageviewmodel.oneimagelivedata.observe(viewLifecycleOwner,{
             Picasso.get().load(it.url).into(binding.imageItem)
             binding.imageCity.text=it.title
+            binding.imageDistance.text=it.dateupload
             Log.d("dfd",binding.imageCity.text.toString())
+
         })
     }
 

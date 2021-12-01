@@ -30,10 +30,10 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyDFSN-iZBJJbfNkyB3QavZoHLlzNZaqpvA" />
 
         <activity
-            android:name="com.example.nearmeproject.views.main.SplashActivity"
+            android:name=".views.main.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
