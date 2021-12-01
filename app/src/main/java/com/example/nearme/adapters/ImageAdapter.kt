@@ -71,7 +71,7 @@ class ImageAdapter(val image: ImageViewModel) :
     class ImageViewHolder(val binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Photo) {
             // displaying the image in the list
-            Picasso.get().load(item.url).into(binding.imageView2)
+            Picasso.get().load(item.url).into(binding.itemImageView)
         }
 
 

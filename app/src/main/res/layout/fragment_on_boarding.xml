@@ -42,7 +42,7 @@
         android:layout_margin="16dp"
         android:contentDescription="@string/goButton"
         android:text="@string/goButton"
-        app:backgroundTint="@color/green_light"
+        app:backgroundTint="@color/lightGreen"
         app:icon="@android:drawable/ic_menu_mylocation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -9,6 +9,14 @@ data class Photo (
     val accuracy: String,
     @SerializedName("context")
     val context: Int,
+    @SerializedName("datetaken")
+    val datetaken: String,
+    @SerializedName("datetakengranularity")
+    val datetakengranularity: String,
+    @SerializedName("datetakenunknown")
+    val datetakenunknown: String,
+    @SerializedName("dateupload")
+    val dateupload: String,
     @SerializedName("farm")
     val farm: Int,
     @SerializedName("geo_is_contact")
