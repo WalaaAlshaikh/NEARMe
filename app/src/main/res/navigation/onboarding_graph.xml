@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_graph"
+    app:startDestination="@id/onBoardingFragment">
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.nearmeproject.views.main.OnBoardingFragment"
+        android:label="@string/nearme"
+        tools:layout="@layout/fragment_on_boarding">
+        <action
+            android:id="@+id/action_onBoardingFragment_to_imageMapsFragment2"
+            app:destination="@id/imageMapsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageMapsFragment2"
+        android:name="com.example.nearme.views.main.ImageMapsFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_image_maps">
+        <action
+            android:id="@+id/action_imageMapsFragment2_to_imageFragment2"
+            app:destination="@id/imageFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment2"
+        android:name="com.example.nearme.views.main.imageFragment"
+        android:label="@string/image">
+        <action
+            android:id="@+id/action_imageFragment2_to_detailfragment2"
+            app:destination="@id/detailfragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailfragment2"
+        android:name="com.example.nearme.views.main.detailfragment"
+        android:label="@string/details" />
+</navigation>

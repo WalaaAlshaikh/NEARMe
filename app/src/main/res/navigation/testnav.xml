@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testnav"
+    app:startDestination="@id/imageMapsFragment">
+
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.nearme.views.main.imageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_detailfragment"
+            app:destination="@id/detailfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailfragment"
+        android:name="com.example.nearme.views.main.detailfragment"
+        android:label="fragment_detailfragment"
+        tools:layout="@layout/fragment_detailfragment" />
+    <fragment
+        android:id="@+id/imageMapsFragment"
+        android:name="com.example.nearme.views.main.ImageMapsFragment"
+        android:label="fragment_image_maps"
+        tools:layout="@layout/fragment_image_maps" >
+        <action
+            android:id="@+id/action_imageMapsFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+</navigation>

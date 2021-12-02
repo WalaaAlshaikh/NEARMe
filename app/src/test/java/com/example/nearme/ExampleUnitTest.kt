@@ -1,4 +1,4 @@
-package com.example.nearmeproject
+package com.example.nearme
 
 import org.junit.Test
 
