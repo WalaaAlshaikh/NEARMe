@@ -3,7 +3,7 @@
 Tuwaiq Academy First Project.
 To-Do list Android Application
 ## Overview:
-![Image of app logo](https://e.top4top.io/p_21625hult1.png)
+![Image of app logo](https://f.top4top.io/p_2162nk8p21.jpg)
 
 
 This project represents an android application **NEARMe**, which helps the user display images based on their current location plus navgigate to any image anywhere.
@@ -171,6 +171,8 @@ it is useful when you want to send a certain image to any app.
 * using Bundle
 It is useful when you want to pass a specific data from one fragment to another.
  ```kotlin
+ 
+ // in first fragment
 var bundle= bundleOf("Lat" to  imageViewModel.lat,"Long" to imageViewModel.long)
                 }
   /// in second fragment
