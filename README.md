@@ -6,7 +6,7 @@ NEARMe Android Application
 ![Image of app logo](https://f.top4top.io/p_2162nk8p21.jpg)
 
 
-This project represents an android application **NEARMe**, which helps the user display images based on their current location plus navgigate to any image anywhere.
+This project represents an android application **NEARMe**, which helps the user display images based on their current location plus navigate to any image anywhere.
 ## Technologies used:
 This application was built using the following technologies:
 ### For Designing the logo of the app:
