@@ -43,6 +43,9 @@ class detailfragment : Fragment() {
         oneimageviewmodel.fetchphotodetails()
 
         //savedInstanceState!!.getParcelable<Photo>("key")
+        //for clicking on the share image
+
+
         binding.shareImage.setOnClickListener {
 
             val image:Bitmap?= getBitmapFromView(binding.imageItem)
@@ -79,6 +82,7 @@ class detailfragment : Fragment() {
 
             Picasso.get().load(it.url).into(binding.imageItem)
             binding.imageTitle.text=it.title
+            binding.imageDistance.text="${it.datetaken}"
             Log.d("dfd",binding.imageTitle.text.toString())
         })
 //        oneimageviewmodel.oneImageErrorLiveData.observe(viewLifecycleOwner,{

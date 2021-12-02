@@ -48,7 +48,7 @@ class ImageAdapter(val image: ImageViewModel) :
         // for moving to another fragment when clicking on the picture to get details
         holder.itemView.setOnClickListener {
 
-            val bundle = Bundle()
+            //val bundle = Bundle()
             //bundle.putParcelable("key",item)
 
             image.oneimagelivedata.postValue(item)

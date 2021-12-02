@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.nearme.model.images.ImageModel
 import com.example.nearme.model.images.Photo
 import com.example.nearme.repositories.ApiRepo
+import com.example.nearme.repositories.RoomRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.lang.Exception
@@ -16,6 +17,8 @@ class ImageViewModel:ViewModel() {
 
 
     val apiRepo=ApiRepo.get()
+    // call for databaseRepo
+    var dataRepo = RoomRepo.get()
     val imageLiveData=MutableLiveData<ImageModel>()
     val imageErrorLiveData=MutableLiveData<String>()
 
@@ -28,6 +31,8 @@ class ImageViewModel:ViewModel() {
     val mapErrorLiveData=MutableLiveData<String>()
 
     //**************************************//
+
+    val dBLiveData=MutableLiveData<List<Photo>>()
 
     var long:Double=0.0
     var lat:Double=0.0
@@ -44,16 +49,20 @@ class ImageViewModel:ViewModel() {
                         Log.d(TAG,response.body().toString())
                         imageLiveData.postValue(this)
 
+                        dataRepo.insertPhoto(photos.photo)
+
 
                     }
                 }else{
                     Log.d(TAG,response.message())
                     imageErrorLiveData.postValue(response.message())
+                    dBLiveData.postValue(dataRepo.getPhoto())
                 }
 
             }catch (e:Exception){
                 Log.d(TAG,e.message.toString())
                 imageErrorLiveData.postValue(e.message.toString())
+                dBLiveData.postValue(dataRepo.getPhoto())
 
             }
         }

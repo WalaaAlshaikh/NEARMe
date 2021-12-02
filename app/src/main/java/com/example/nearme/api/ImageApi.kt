@@ -9,7 +9,7 @@ import retrofit2.http.Query
 import retrofit2.http.Url
 
 interface ImageApi {
-    @GET("/services/rest/?method=flickr.photos.search&api_key=9e5f12168b375780422f42def7e7c339&extras=url_m%2C+geo&accurecy=&per_page=10&format=json&nojsoncallback=1")
+    @GET("/services/rest/?method=flickr.photos.search&api_key=9e5f12168b375780422f42def7e7c339&extras=url_m%2C+geo,date_upload,date_taken&per_page=30&format=json&nojsoncallback=1")
    // getImage function for fetching the list of the images from the api (putting Latitude and Longitude as Queries)
    suspend fun getImage(
         @Query("lat") lat:Double,

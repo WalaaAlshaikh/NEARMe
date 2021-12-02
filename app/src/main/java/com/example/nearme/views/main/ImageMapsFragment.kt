@@ -47,10 +47,12 @@ class ImageMapsFragment : Fragment(),OnMapReadyCallback, GoogleMap.OnMarkerClick
             googleMaps.clear()
             val marker = MarkerOptions().position(it)
             googleMap.addMarker(marker)
+
             Log.d(TAG, "click: lat: ${it.latitude}, long: ${it.longitude}")
             imageViewModel.mapcall(imageViewModel.lat,imageViewModel.long)
             imageViewModel.lat=it.latitude
             imageViewModel.long=it.longitude
+            // using bundle
 
             var bundle= bundleOf("Lat" to  imageViewModel.lat,"Long" to imageViewModel.long)
 
@@ -81,7 +83,7 @@ class ImageMapsFragment : Fragment(),OnMapReadyCallback, GoogleMap.OnMarkerClick
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
-      //  fetchMap()
+
     }
     override fun onRequestPermissionsResult(
         requestCode: Int,

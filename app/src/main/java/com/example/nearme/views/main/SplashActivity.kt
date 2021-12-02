@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.example.nearme.databinding.ActivitySplashBinding
 import com.example.nearme.repositories.ApiRepo
+import com.example.nearme.repositories.RoomRepo
 import com.example.nearme.views.MainActivity
 
 
@@ -16,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ApiRepo.init(this)
+        RoomRepo.init(this)
 
         supportActionBar?.hide()
 

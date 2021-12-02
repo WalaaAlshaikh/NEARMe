@@ -2,8 +2,10 @@ package com.example.nearme.model.images
 
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-
+@Entity
 data class Photo (
     @SerializedName("accuracy")
     val accuracy: String,
@@ -29,6 +31,7 @@ data class Photo (
     val geoIsPublic: Int,
     @SerializedName("height_m")
     val height: Int,
+    @PrimaryKey
     @SerializedName("id")
     val id: String,
     @SerializedName("isfamily")

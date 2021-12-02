@@ -23,7 +23,7 @@ class imageFragment : Fragment() {
     private lateinit var binding:FragmentImageBinding
 
     private val imageViewModel:ImageViewModel by activityViewModels()
-    //private val list= mutableListOf<Photo>()
+    private val list= mutableListOf<Photo>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,24 +54,33 @@ class imageFragment : Fragment() {
 
         //setting the observer for the live data
         imageViewModel.imageLiveData.observe(viewLifecycleOwner,{
+            it?.let {   binding.progressBar.animate().alpha(0f)
+                Log.d(TAG, "Observer: $it")
+                Log.d("Blah",imageViewModel.lat.toString())
+                Log.d("Blah",imageViewModel.long.toString())
+                adapter.submittedList(it.photos.photo) }
+
+            imageViewModel.imageLiveData.postValue(null)
+
+
+
+
+        })
+
+        imageViewModel.dBLiveData.observe(viewLifecycleOwner,{
             binding.progressBar.animate().alpha(0f)
-            Log.d(TAG, "Observer: $it")
-            Log.d("Blah",imageViewModel.lat.toString())
-            Log.d("Blah",imageViewModel.long.toString())
-            adapter.submittedList(it.photos.photo)
-
-
-
+           adapter.submittedList(it)
+            binding.ImageRecyclerView.animate().alpha(1f)
         })
 
 
-        imageViewModel.oneImageErrorLiveData.observe(viewLifecycleOwner,{
-
-            it?.let{
-                Toast.makeText(requireActivity(), it, Toast.LENGTH_LONG).show()
-                imageViewModel.oneImageErrorLiveData.postValue(null)
-            }
-        })
+//        imageViewModel.oneImageErrorLiveData.observe(viewLifecycleOwner,{
+//
+//            it?.let{
+//                Toast.makeText(requireActivity(), it, Toast.LENGTH_LONG).show()
+//                imageViewModel.oneImageErrorLiveData.postValue(null)
+//            }
+//        })
 
         
 
