@@ -133,7 +133,7 @@ Thirdly, we designed the screens each of them suitable for a specific action usi
 For many problems that we faced,we needed first to decide the nature of the error (if it's syntax, runtime or logical), and then find the solution accordingly.Such solutions that can be disovered when debugging the error, using (Log.d)to specifty the location of the error, searching for similar cases online in [stackoverflow](https://stackoverflow.com/) and asking for the help of the experts.
 ## Unsolved Problems which would be fixed in future iterations:
 * seeting the favourite image in a separate list which can potentially fixed by using a certain api from  [FlikrApi](https://www.flickr.com/services/api/) and do the authentication .
-* some bugs regarding maps such as the marker would not disappeare when moving to another place .
+* some bugs regarding maps such as the marker would not disappear when moving to another place .
 * some minor issues regarding the enhancment of the design to make the user expereince more dynamic.
 
 ## My favorite functions work:
